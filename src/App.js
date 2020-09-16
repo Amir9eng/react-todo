@@ -2,6 +2,7 @@ import React from 'react';
 import './App.scss';
 
 
+const id = (length = 3) => Math.random().toString(36).substring(2, 2 + length)
 
 const SearchBox = () => (
     <div className="SearchBox">
