@@ -66,6 +66,10 @@ margin-bottom: 1rem;
   flex-grow: .5;
   resize: none;
 }
+form{
+  display: flex;
+  flex-direction: column;
+}
 .colorBoxes{
   display: flex;
   align-items: center;
