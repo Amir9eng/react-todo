@@ -106,7 +106,7 @@ function App() {
         </div>
         </form >
       </div>
-      <div >
+      <div className= "NoteContent">
       <h3>How to learn React in five minutes</h3>
       <span>Sep 11,2020 at 10:30:47 AM</span>
       </div>

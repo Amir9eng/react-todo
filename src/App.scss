@@ -33,7 +33,6 @@
 
 .TodoWrapper{
   margin-left: 2rem;
-  // background-color: white;
   margin-top: 2rem;
 }
 .TodoList{
@@ -50,16 +49,14 @@ font-size: .8rem;
 margin-bottom: 1rem;
 }
 .AddTodo{
-  margin-top: 2rem;
-  // width: 60%;
-  padding: 1rem;
-  background-color: white;
+  margin-top: 2.5rem;
+  padding: 1rem;  
   margin-right: 2rem;
 }
 .Todos{
   display: flex;
   flex-direction: column;
-  height: 40%;
+  height: 60%;
   
 }
 .Todos input{
@@ -71,12 +68,16 @@ margin-bottom: 1rem;
   border: none;
   outline: none;
   margin-top: 1rem;
-  flex-grow: .5;
+  flex-grow: 1;
   resize: none;
 }
 form{
+  // margin-top: .5rem;
   display: flex;
   flex-direction: column;
+  background-color: white;
+  padding: .5rem;
+  height: 50%;
 }
 .colorBoxes{
   display: flex;
@@ -87,7 +88,7 @@ form{
 .colorBoxes img{
   width: 1.5rem;
   height: 1.5rem;
-  padding-left: .5rem;
+  padding-left: .7rem;
 }
 .colorBoxes img:first-child{
   padding-left: 0;
@@ -97,3 +98,8 @@ button{
   border-radius: 14%;
   box-shadow: 1px 2px 1px ;
 }
+
+.NoteContent{
+  margin-top: 5rem;
+}
+
