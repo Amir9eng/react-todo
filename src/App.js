@@ -12,27 +12,30 @@ const Timee = (timeStamp) => {
   const now = new Date(timeStamp);
    return` ${months[now.getMonth()]} ${now.getDate()}, ${now.getFullYear()} at ${now.toLocaleTimeString()} `
 }
-
+  
 const defaultNote = {}
 defaultNote[id()]=
 {
   title: 'How to learn React in five minutes',
   content: 'Lorem ipsum dolor sit amet ',
   dateCreated: Timee(Date.now()),
-  color: 'rgb(255,255,255)'
+  // color: 'rgb(255,255,255)'
 
 }
-
+  
 
 
 function App() {
-
+  const defaultScreen =defaultNote[Object.keys(defaultNote)[0]]
   const [note, setNote] = useState(defaultNote)
+  
+  const [display, setDisplay] = useState(defaultScreen)
 
   const addNote= (ev) =>{
     ev.preventDefault()
-    let title = ev.target.title.value
+     let title = ev.target.title.value
      let content = ev.target.content.value
+     
 
      const noteOb = {}
      noteOb[id()] = {
@@ -48,16 +51,24 @@ function App() {
      ev.target.content.value= ''
   }
 
+  const handleDisplay =(title, content, dateCreated) =>{
+    setDisplay({
+      ...display,
+     title,
+     content,
+     dateCreated
+    })
+  }
+
   const NoteList = ({list}) => {
     return (
     Object.keys(list).map(noteid=> {
       const note = list[noteid]
       return(
-      <div key={noteid} className= "noteList">
+      <div key={noteid} className= "noteList" onClick= {() => handleDisplay(note.title, note.content, note.dateCreated)}>
               <span>{note.title}</span> <br />
-
               <span>{note.content}</span>
-        <span >{note.dateCreated}</span>
+              <span>{note.dateCreated}</span>
       </div>)
     }))
   }
@@ -97,18 +108,19 @@ function App() {
         <textarea placeholder="type your note..." name= "content"></textarea>
         <div className="colorBoxes">
         <div>
-        <img src="/vectors/Rectangle 4.svg"></img>
-        <img src="/vectors/Rectangle 7.svg"></img>
-        <img src="/vectors/Rectangle 8.svg"></img>
-        <img src="/vectors/Rectangle 9.svg"></img>
+        <img src="/vectors/Rectangle 4.svg" alt="rec"></img>
+        <img src="/vectors/Rectangle 7.svg" alt="rec"></img>
+        <img src="/vectors/Rectangle 8.svg" alt="rec"></img>
+        <img src="/vectors/Rectangle 9.svg" alt="rec"></img>
         </div>
         <button className= "mark" type="submit" form="my-form"><img src="/vectors/vector.svg" /></button>
         </div>
         </form >
       </div>
-      <div className= "NoteContent">
-      <h3>How to learn React in five minutes</h3>
-      <span>Sep 11,2020 at 10:30:47 AM</span>
+      <div className= "NoteContent" style={{background:display.color}}>
+           <h3>{display.title}</h3>
+           <p>{display.content}</p>
+           <span>{display.dateCreated}</span>
       </div>
     </div>
     </div>

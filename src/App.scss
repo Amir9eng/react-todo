@@ -6,18 +6,20 @@
   grid-gap: 40px;
   margin: 0;
   padding: 0;
-  font-size: 16px;
+  font-size: 12px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  height: 100vh;
-  width: 100vw;
+  height: 80vh;
+  width: 70vw;
+  margin: 10vh auto;
+
 }
 .SearchBox{
   margin-bottom: .8rem;
   display: flex;
-  background: #FFFFFF;
+  // background: #FFFFFF;
   box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
-  width: 15rem;
+  width: 10rem;
   padding: .9rem;
 }
 .SearchBox input{
@@ -35,21 +37,8 @@
   margin-left: 2rem;
   margin-top: 2rem;
 }
-.TodoList{
-  // padding: 1rem;
-  border-bottom: 1px solid rgba($color: #000000, $alpha: .1);
-}
-
-.TodoList p{
-  margin: 0;
-}
-.TodoList span{
-color: rgba($color: #000000, $alpha: .5);
-font-size: .8rem;
-margin-bottom: 1rem;
-}
 .AddTodo{
-  margin-top: 2.5rem;
+  margin-top: 2rem;
   padding: 1rem;  
   margin-right: 2rem;
 }
@@ -99,7 +88,15 @@ button{
   box-shadow: 1px 2px 1px ;
 }
 
-.NoteContent{
-  margin-top: 5rem;
+.noteList{
+  border-bottom: 1px solid rgba($color: #000000, $alpha: 0.2);
+  padding-bottom: 1rem;
 }
 
+.NoteContent{
+  margin-top: 1rem;
+}
+
+.NoteContent span{
+  font-size: .7rem;
+}
