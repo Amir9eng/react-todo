@@ -81,6 +81,19 @@ function App() {
     
   
   )
+  const SearchBox = ({ onInput }) => {
+    // Object.keys(todos).filter((item) => todos[item].title.startsWith(ev.target.value)?todos[item].title :false ).map((item,i) => <a href="/" className="option" key={i}>{item}</a>)
+
+
+    return (
+
+        <div className="SearchBox">
+            <img src="/vectors/search.svg" alt="search-icon" />
+            <input type="text" placeholder="Search" onChange={onInput} />
+
+        </div>
+    )
+}
 
   
   const TodoWrapper = () => (
