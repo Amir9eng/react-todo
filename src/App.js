@@ -82,7 +82,7 @@ function App() {
   
   )
   const SearchBox = ({ onInput }) => {
-    Object.keys(todos).filter((item) => todos[item].title.startsWith(ev.target.value)?todos[item].title :false ).map((item,i) => <a href="/" className="option" key={i}>{item}</a>)
+    // Object.keys(todos).filter((item) => todos[item].title.startsWith(ev.target.value)?todos[item].title :false ).map((item,i) => <a href="/" className="option" key={i}>{item}</a>)
 
 
     return (
